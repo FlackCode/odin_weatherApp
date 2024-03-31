@@ -17,7 +17,7 @@ citySubmit.addEventListener(`click`, () => {
     }
 });
 async function getWeatherInfo(query) {
-    const response =  await fetch(`http://api.weatherapi.com/v1/current.json?key=a985db7d082a45b5a4d104119243103&q=${query}&aqi=no`)
+    const response =  await fetch(`https://api.weatherapi.com/v1/current.json?key=a985db7d082a45b5a4d104119243103&q=${query}&aqi=no`)
     if ( response.ok ) {
         const weatherData = await response.json();
         weatherIcon.src = weatherData.current.condition.icon;
